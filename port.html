@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Omar | Bug Bounty Hunter</title>
+  <style>
+    :root {
+      --bg-color: #0f2027;
+      --card-bg: #1c1c1c;
+      --text-color: #fff;
+      --subtext-color: #aaa;
+      --accent: #3498db;
+      --link-color: #1abc9c;
+    }
+
+    body.light-mode {
+      --bg-color: #f5f5f5;
+      --card-bg: #ffffff;
+      --text-color: #000;
+      --subtext-color: #555;
+      --accent: #2980b9;
+      --link-color: #16a085;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: var(--subtext-color);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      color: var(--accent);
+      font-size: 1.6em;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      margin-bottom: 20px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p, .card ul li {
+      color: var(--subtext-color);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      padding: 20px;
+      color: var(--subtext-color);
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .contact a {
+      display: inline-block;
+      background-color: var(--link-color);
+      padding: 12px 25px;
+      border-radius: 25px;
+      color: #fff;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .contact a:hover {
+      opacity: 0.9;
+    }
+
+    #toggle-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: background 0.3s ease, color 0.3s ease;
+      z-index: 999;
+    }
+
+    #toggle-btn:hover {
+      background-color: var(--accent);
+      color: #fff;
+    }
+
+    /* ========== Responsive Styles ========== */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.3em;
+      }
+
+      .card {
+        padding: 15px;
+      }
+
+      #toggle-btn {
+        top: 10px;
+        left: 10px;
+        padding: 8px 16px;
+        font-size: 0.9em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
+
+      .contact a {
+        padding: 10px 20px;
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button id="toggle-btn">Toggle Theme</button>
+
+  <header>
+    <h1>Omar</h1>
+    <p>Bug Bounty Hunter | Web Security Researcher</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>About Me</h2>
+      <div class="card">
+        <p>
+          I am Omar, a passionate and self-taught Bug Bounty Hunter with a strong focus on web application vulnerabilities. 
+          I enjoy discovering security flaws and helping companies improve their systems. I'm experienced in identifying XSS, SQLi, IDOR, and other critical issues.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Recognitions & Hall of Fame</h2>
+      <div class="card">
+        <h3>Company A</h3>
+        <p>Reported a critical IDOR vulnerability – <a href="#">View Acknowledgment</a></p>
+      </div>
+      <div class="card">
+        <h3>Company B</h3>
+        <p>Reported a Stored XSS vulnerability – <a href="#">View Hall of Fame</a></p>
+      </div>
+      <div class="card">
+        <h3>Company C</h3>
+        <p>Reported an authentication bypass issue – <a href="#">Acknowledged on Security Page</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="card">
+        <ul>
+          <li>Manual Web App Testing</li>
+          <li>Burp Suite / OWASP ZAP</li>
+          <li>Reconnaissance & OSINT</li>
+          <li>Automation with Python</li>
+          <li>Writing professional vulnerability reports</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <p>If you'd like to collaborate or have a project in mind, feel free to reach out.</p>
+      <a href="mailto:your_email@example.com">Get in Touch</a>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Omar - Bug Bounty Hunter | All rights reserved
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-btn');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+    });
+  </script>
+</body>
+</html>
